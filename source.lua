@@ -1786,21 +1786,18 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Topbar.Visible = false
 	Elements.Visible = false
 	LoadingFrame.Visible = true
-
-	if not Settings.DisableRayfieldPrompts then
-		task.spawn(function()
-			while not rayfieldDestroyed do
-				task.wait(math.random(180, 600))
-				if rayfieldDestroyed then break end
-				RayfieldLibrary:Notify({
-					Title = "Rayfield Interface",
-					Content = "Enjoying this UI library? Find it at sirius.menu/discord",
-					Duration = 7,
-					Image = 4370033185,
-				})
-			end
-		end)
-	end
+			
+	--if not Settings.DisableRayfieldPrompts then
+		--task.spawn(function()
+			--while not rayfieldDestroyed do
+				--task.wait(math.random(180, 600))
+				--if rayfieldDestroyed then break end
+				--RayfieldLibrary:Notify({
+					--Title = "Rayfield Interface",
+					--Content = "Enjoying this UI library? Find it at sirius.menu/discord",
+					--Duration = 7,
+					--Image = 4370033185,
+				--})
 
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
